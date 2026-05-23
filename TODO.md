@@ -35,8 +35,8 @@ Tweet milestones are marked with  — post when you hit those.
 - [x] **Step 1.2** — Run `npm install`
 - [x] **Step 1.3** — Run `npm run dev`
 - [x] **Step 1.4** — Confirm blank page loads at localhost:5173 with no errors
-- [ ] **Step 1.5** — Confirm Tailwind is working (add a test class, check it applies)
-- [ ] **Step 1.6** — Commit: `git commit -m "chore: project scaffold"`
+- [x] **Step 1.5** — Confirm Tailwind is working (add a test class, check it applies)
+- [x] **Step 1.6** — Commit: `git commit -m "chore: project scaffold"`
 
 ---
 
