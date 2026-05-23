@@ -1,4 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Navbar from './components/Navbar.jsx'
+import Footer from './components/Footer.jsx'
+import Home from './pages/Home.jsx'
 
 function PlaceholderPage({ name }) {
   return (
@@ -11,11 +14,15 @@ function PlaceholderPage({ name }) {
 export default function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<PlaceholderPage name="Home" />} />
-        <Route path="/calc" element={<PlaceholderPage name="Margin Calculator" />} />
-        <Route path="/sfs" element={<PlaceholderPage name="SfS Planner" />} />
-      </Routes>
+      <Navbar />
+      <main style={{ paddingTop: '56px', flex: 1 }}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/calc" element={<PlaceholderPage name="Margin Calculator" />} />
+          <Route path="/sfs" element={<PlaceholderPage name="SfS Planner" />} />
+        </Routes>
+      </main>
+      <Footer />
     </BrowserRouter>
   )
 }
