@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(cd \"C:\\\\Users\\\\QUEEN\\\\rialytic\"; Start-Process -FilePath \"cmd.exe\" -ArgumentList \"/c npx vite --port 5173\" -WindowStyle Hidden; Start-Sleep -Seconds 5; try { $r = Invoke-WebRequest -Uri \"http://localhost:5173\" -TimeoutSec 5 -UseBasicParsing; \"HTTP $\\($r.StatusCode\\) - dev server is up\" } catch { \"Server not yet responding: $_\" })"
+    ]
+  }
+}
