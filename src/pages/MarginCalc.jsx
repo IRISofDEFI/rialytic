@@ -62,7 +62,7 @@ export default function MarginCalc() {
   const results = calculateMonthlyCosts(chain, volume, activeMiddleware)
 
   return (
-    <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '40px 24px 64px' }}>
+    <div className="page-content">
 
       {/* page header */}
       <div style={{ marginBottom: '32px' }}>
@@ -140,7 +140,20 @@ export default function MarginCalc() {
         </div>
 
         {/* RIGHT — results, sticky on desktop */}
-        <div style={{ position: 'sticky', top: '76px', alignSelf: 'start', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+        <div className="results-panel">
+
+          {activeMiddleware.length === 0 && (
+            <div style={{
+              background:   'var(--amber-dim)',
+              border:       '1px solid rgba(251,191,36,0.2)',
+              borderRadius: '8px',
+              padding:      '10px 14px',
+              fontSize:     '13px',
+              color:        'var(--text2)',
+            }}>
+              Select at least one middleware layer to see the full comparison.
+            </div>
+          )}
 
           <div style={sectionStyle}>
             <p style={{ fontSize: '12px', textTransform: 'uppercase', letterSpacing: '0.07em', color: 'var(--text3)', margin: 0 }}>

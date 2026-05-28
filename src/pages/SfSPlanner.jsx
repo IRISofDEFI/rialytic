@@ -77,7 +77,7 @@ export default function SfSPlanner() {
   const isSustainable = monthlyCreditsUSD >= totalMonthlyCostUSD
 
   return (
-    <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '40px 24px 64px' }}>
+    <div className="page-content">
 
       <div style={{ marginBottom: '32px' }}>
         <h1 style={{ fontSize: '24px', fontWeight: 600, color: 'var(--text)', letterSpacing: '-0.02em', marginBottom: '8px' }}>
@@ -181,7 +181,7 @@ export default function SfSPlanner() {
         </div>
 
         {/* RIGHT — results, sticky on desktop */}
-        <div style={{ position: 'sticky', top: '76px', alignSelf: 'start', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+        <div className="results-panel">
 
           <SustainabilityStatus
             monthlyCreditsUSD={monthlyCreditsUSD}

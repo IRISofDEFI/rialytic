@@ -142,6 +142,34 @@ select.input {
   color: var(--text);
 }
 
+/* Page wrapper — reduced padding on mobile */
+.page-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+@media (min-width: 640px) {
+  .page-content {
+    padding: 40px 24px 64px;
+  }
+}
+
+/* Results panel — sticky only on desktop so mobile single-column layout scrolls naturally */
+.results-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-self: start;
+}
+
+@media (min-width: 768px) {
+  .results-panel {
+    position: sticky;
+    top: 76px;
+  }
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
