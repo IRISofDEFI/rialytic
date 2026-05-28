@@ -3,6 +3,7 @@ import Navbar from './components/Navbar.jsx'
 import Footer from './components/Footer.jsx'
 import Home from './pages/Home.jsx'
 import MarginCalc from './pages/MarginCalc.jsx'
+import SfSPlanner from './pages/SfSPlanner.jsx'
 
 function PlaceholderPage({ name }) {
   return (
@@ -20,7 +21,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/calc" element={<MarginCalc />} />
-          <Route path="/sfs" element={<PlaceholderPage name="SfS Planner" />} />
+          <Route path="/sfs" element={<SfSPlanner />} />
         </Routes>
       </main>
       <Footer />
